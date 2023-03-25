@@ -23,7 +23,6 @@ public class PersonajeEntity {
     private Double velocidad;
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "mochila_id")
-    @JsonManagedReference
     private MochilaEntity mochila;
 
 

@@ -21,11 +21,6 @@ public class MochilaEntity {
     private Long mochilaId;
 
     private String nombre;
-
     private Integer capacidad;
-
     private String color;
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "mochila")
-    @JsonBackReference
-    private PersonajeEntity personaje;
 }
