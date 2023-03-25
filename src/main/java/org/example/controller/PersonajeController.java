@@ -15,6 +15,7 @@ public class PersonajeController {
     @Autowired
     private PersonajeService personajeService;
 
+
     @GetMapping
     public ResponseEntity<List<PersonajeEntity>> listarPersonajes(){
         return personajeService.listarPersonajes();
