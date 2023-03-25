@@ -19,7 +19,6 @@ public class MochilaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "mochila_id")
     private Long mochilaId;
-
     private String nombre;
     private Integer capacidad;
     private String color;
