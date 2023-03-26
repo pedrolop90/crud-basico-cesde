@@ -20,7 +20,8 @@ public class PersonajeEntity {
     private String nombre;
     private Double salud;
     private Double velocidad;
-    @OneToOne(cascade=CascadeType.ALL)
+    //@OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "mochila_id")
     private MochilaEntity mochila;
 

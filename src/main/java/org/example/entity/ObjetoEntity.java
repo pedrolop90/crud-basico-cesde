@@ -1,9 +1,13 @@
 package org.example.entity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,5 +22,9 @@ public class ObjetoEntity {
     private Long objetoId;
     private String nombre;
     private String tipo;
-    private String costo;
+    private Float costo;
+    //@ManyToMany(mappedBy = "objetos")
+    //@JsonBackReference
+    //private List<MochilaEntity> mochilaEntities= new ArrayList<>();
+    //private List<MochilaEntity> mochilaEntities= new ArrayList<>();
 }

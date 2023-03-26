@@ -27,7 +27,7 @@ public class ObjetoController {
     public ResponseEntity<ObjetoEntity> crearObjeto(@RequestBody ObjetoEntity objetoEntity){
         return objetoService.crearObjeto(objetoEntity);
     }
-    @PostMapping()
+    @PutMapping()
     public ResponseEntity<ObjetoEntity> actualizarObjeto(@RequestBody ObjetoEntity objetoEntity){
         return objetoService.actualizarObjeto(objetoEntity);
     }
