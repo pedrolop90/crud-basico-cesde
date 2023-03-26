@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "8e386394-732a-4efb-a6b9-502f8004b356",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mochilas",
+			"item": [
+				{
+					"name": "obtenerMochilas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"laptopName\": \"xddd\",\r\n        \"laptopMarca\": \"preuab\",\r\n        \"laptopYear\": 2002\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/mochilas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMochila",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/mochilas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearMochila",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"black velvet\",\r\n    \"capacidad\":12,\r\n    \"color\":\"negra\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/mochilas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarMochila",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"mochilaId\":1,\r\n    \"nombre\":\"red velvet\",\r\n    \"capacidad\":21,\r\n    \"color\":\"roja\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/mochilas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarMochila",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/mochilas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarMochilas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/mochilas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"mochilas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personajes",
+			"item": [
+				{
+					"name": "obtenerPersonajes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/personajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerPersonaje",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/personajes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearPersonaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"sailen\",\r\n    \"salud\":99.1,\r\n    \"velocidad\":1.2,\r\n    \"mochila\":{\r\n        \"nombre\": \"red velvet\",\r\n        \"capacidad\": 23,\r\n        \"color\": \"roja\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/personajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarPersonaje",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personajeId\": 3,\r\n    \"nombre\": \"maria\",\r\n    \"salud\": 1,\r\n    \"velocidad\": 2,\r\n    \"mochila\": {\r\n        \"nombre\": \"blue velvet\",\r\n        \"capacidad\": 23,\r\n        \"color\": \"roja\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/personajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarPersonaje",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/personajes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarPersonajes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9020/personajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"personajes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Objetos",
+			"item": [
+				{
+					"name": "obtenerObjetos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerObjeto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objeto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objeto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearObjeto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Espada\",\r\n    \"tipo\":\"arma\",\r\n    \"costo\":12000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarObjeto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"objetoId\":1,\r\n    \"nombre\":\"arco\",\r\n    \"tipo\":\"arma\",\r\n    \"costo\":2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarObjeto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objetos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objetos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarObjetos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9020/objetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9020",
+							"path": [
+								"objetos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
