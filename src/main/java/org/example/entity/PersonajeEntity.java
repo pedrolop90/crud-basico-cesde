@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,9 +20,9 @@ public class PersonajeEntity {
     private String nombre;
     private Double salud;
     private Double velocidad;
-    @OneToOne(cascade=CascadeType.ALL)
+    //@OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "mochila_id")
-    @JsonManagedReference
     private MochilaEntity mochila;
 
 
